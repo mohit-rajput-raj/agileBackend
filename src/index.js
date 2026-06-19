@@ -39,6 +39,8 @@ app.use(cors({origin: process.env.FRONT_URL,credentials: true,}));
 app.use(cookieParser());
 app.use(express.json());
 // app.get('/',(req,res)=>{res.send('Hello World bhai saab');})
+
+app.use("/","hello my agile friends");
 app.use("/api/auth", authRoute);
 app.use("/api/dashboard", dashRoute);
 app.use("/api/messages", messageRoute);
