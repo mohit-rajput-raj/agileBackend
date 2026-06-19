@@ -28,7 +28,7 @@ import postsRoute from "./routes/posts.route.js";
 dotenv.config();
 const Port = process.env.PORT || 3000;
 import {connectDB} from "./library/db.js";
-connectDB();    
+await connectDB();    
 
 // if(process.env.NODE_ENV ==='production'){
 app.use(cors({origin: process.env.FRONT_URL,credentials: true,}));
